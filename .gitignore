@@ -1,0 +1,82 @@
+# --- Python 通用忽略 ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 虚拟环境 (Virtual Environments) ---
+# 常见的虚拟环境目录名
+.venv/
+venv/
+env/
+ENV/
+
+# --- 环境变量与密钥 (Secrets) ---
+# ⚠️ 极其重要：永远不要提交真实密钥到 Git
+.env
+.env.prod
+.env.local
+
+# 注意：我们要保留 .env.example 作为模板
+!.env.example
+
+# --- IDE 编辑器配置 ---
+# VS Code
+.vscode/
+# JetBrains (PyCharm)
+.idea/
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# --- 操作系统文件 ---
+# Mac OS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- 数据库与迁移 ---
+# 本地 SQLite 文件 (虽然你用 Postgres，但防止误用)
+*.sqlite3
+*.db
+# Alembic 产生的缓存 (如果有)
+alembic/__pycache__/
+
+# --- 日志 (Logs) ---
+# 忽略 Loguru 生成的日志文件
+logs/
+*.log
+
+# --- 测试与覆盖率 (Testing) ---
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# --- Celery 异步任务 ---
+# Celery Beat 产生的时间调度文件
+celerybeat-schedule
+celerybeat.pid
+
+# --- Docker ---
+# 本地覆盖配置 (如果有)
+docker-compose.override.yml
+
+# --- 数据与临时文件 (Data) ---
+# 忽略本地测试用的 Excel/CSV 文件
+*.xlsx
+*.csv
+*.xls
+
+# --- 静态文件/上传文件 ---
+# 如果你有本地文件上传目录
+static/uploads/
+app/static/
+
+# --- 类型检查缓存 (Type Checking) ---
+.mypy_cache/
+.dmypy.json
+dmypy.json
